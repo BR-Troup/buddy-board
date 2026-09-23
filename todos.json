@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-22T20:14:00-04:00",
+  "updated_at": "2026-09-22T20:17:00-04:00",
   "headline": "Daily board",
-  "synthesis": "13 open items on the board \u2014 7 marked high urgency from Vacuum\u2019s inbox pass (waivers, school forms, payments, security). Pencil notes below; Buddy will re-synthesize each morning.",
+  "synthesis": "17 open items \u2014 9 high urgency. Latest from Vacuum: Sylvania Rec invite, FinalForms migration, Goldfish Swim $31, Venmo phone-change confirm.",
   "items": [
     {
       "id": "dialed-in-aug-invoice",
@@ -49,6 +49,22 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Review Venmo password-change and remembered-device alerts. Urgency: High.",
+      "days_late": 0
+    },
+    {
+      "id": "venmo-phone-changed",
+      "text": "Venmo phone number changed",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Confirm Venmo phone-number change was you (Jun 2025 security alert). Urgency: High.",
+      "days_late": 0
+    },
+    {
+      "id": "finalforms-oneview",
+      "text": "FinalForms / OneView migration",
+      "due_date": "2026-09-23",
+      "category": "school",
+      "note": "Complete FinalForms enrollment/student info (replaces OneView). Urgency: High.",
       "days_late": 0
     },
     {
@@ -100,11 +116,27 @@
       "days_late": 0
     },
     {
+      "id": "goldfish-overdue",
+      "text": "Goldfish Swim overdue $31",
+      "due_date": "2026-09-23",
+      "category": "school",
+      "note": "Pay past-due Goldfish Swim School balance. Urgency: Medium.",
+      "days_late": 0
+    },
+    {
       "id": "league-apps-registration",
       "text": "League Apps registration setup",
       "due_date": "2026-09-23",
       "category": "school",
       "note": "Create/complete the new registration account. Urgency: Medium.",
+      "days_late": 0
+    },
+    {
+      "id": "sylvania-rec-invite",
+      "text": "Sylvania Recreation account invite",
+      "due_date": "2026-09-23",
+      "category": "school",
+      "note": "Accept Chelsie Troup\u2019s invite to join the Sylvania Recreation account. Urgency: Medium.",
       "days_late": 0
     }
   ]
