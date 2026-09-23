@@ -1,4 +1,4 @@
-const CACHE = 'buddy-board-v1';
+const CACHE = 'buddy-board-v2';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './todos.json', './icon-180.png', './icon-192.png'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));

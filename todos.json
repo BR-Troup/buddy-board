@@ -1,15 +1,40 @@
 {
-  "updated_at": "2026-09-22T20:51:00-04:00",
-  "headline": "Daily board",
-  "synthesis": "21 open items \u2014 9 high urgency. Overnight add: Opt Health lab + next steps, term life policies, Team Toledo bags tracking.",
+  "updated_at": "2026-09-22T20:54:00-04:00",
+  "headline": "Punchlist",
+  "synthesis": "29 open \u2014 16 high urgency. New overnight: USAA, Netflix hold, Credit Karma, hard inquiry, ADT DocuSign, Opt Health password/labs, Cherokee goaltending contract. Tap Email \u00b7 Done \u00b7 Follow-up \u00b7 Delete. Notes tab for typed notes.",
   "items": [
+    {
+      "id": "adt-docusign",
+      "text": "ADT DocuSign contract",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "ADT contract signature requested via DocuSign. Urgency: High.",
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/ADT%20DocuSign",
+      "follow_up": false
+    },
+    {
+      "id": "credit-karma-new-account",
+      "text": "Credit Karma new account alert",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Verify if new account on Credit Karma is yours. Urgency: High.",
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Credit%20Karma%20account",
+      "follow_up": false
+    },
     {
       "id": "dialed-in-aug-invoice",
       "text": "Dialed In Goaltending Aug invoice",
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Pay 2018 Cherokee August goalie invoice (dialedingoaltending@gmail.com). Urgency: High.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Dialed+In+Goaltending",
+      "follow_up": false
     },
     {
       "id": "fidelity-confirm",
@@ -17,7 +42,21 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Review Fidelity linked-account and address-on-file confirmations. Urgency: High.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Fidelity",
+      "follow_up": false
+    },
+    {
+      "id": "hard-credit-check",
+      "text": "Hard credit check added",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Verify recent hard credit inquiry. Urgency: High.",
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/hard%20inquiry%20OR%20credit%20check",
+      "follow_up": false
     },
     {
       "id": "healthcare-balance",
@@ -25,7 +64,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Review/pay outstanding Mercy Health balance. Urgency: High.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Mercy+Health",
+      "follow_up": false
     },
     {
       "id": "missing-e-waiver",
@@ -33,7 +75,43 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Complete the Grinder Hockey e-waiver. Urgency: High.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/e-waiver+OR+Grinder",
+      "follow_up": false
+    },
+    {
+      "id": "netflix-on-hold",
+      "text": "Netflix account on hold",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Update billing \u2014 Netflix account on hold. Urgency: High.",
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Netflix%20hold%20OR%20billing",
+      "follow_up": false
+    },
+    {
+      "id": "opt-health-labs-high",
+      "text": "Opt Health labs / next steps",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Labs in; log into Opt Health; Quest requisition if still open. Urgency: High.",
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Opt%20Health%20lab%20OR%20Quest",
+      "follow_up": false
+    },
+    {
+      "id": "opt-health-password",
+      "text": "Opt Health password reset",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Reset Opt Health password (Jun 1 2026 email). Urgency: High.",
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Opt%20Health%20password",
+      "follow_up": false
     },
     {
       "id": "tournament-invoices",
@@ -41,7 +119,21 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Review hockey tournament invoices and outstanding balance. Urgency: High.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/tournament+invoice",
+      "follow_up": false
+    },
+    {
+      "id": "usaa-cancel-pending",
+      "text": "USAA insurance cancellation pending",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Avoid cancellation of USAA insurance policy \u2014 action needed. Urgency: High.",
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/USAA%20cancel%20OR%20cancellation",
+      "follow_up": false
     },
     {
       "id": "venmo-security",
@@ -49,7 +141,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Review Venmo password-change and remembered-device alerts. Urgency: High.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Venmo+password",
+      "follow_up": false
     },
     {
       "id": "venmo-phone-changed",
@@ -57,7 +152,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Confirm Venmo phone-number change was you (Jun 2025 security alert). Urgency: High.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Venmo+phone",
+      "follow_up": false
     },
     {
       "id": "finalforms-oneview",
@@ -65,7 +163,10 @@
       "due_date": "2026-09-23",
       "category": "school",
       "note": "Complete FinalForms enrollment/student info (replaces OneView). Urgency: High.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/FinalForms",
+      "follow_up": false
     },
     {
       "id": "finalforms-hardy",
@@ -73,7 +174,10 @@
       "due_date": "2026-09-23",
       "category": "school",
       "note": "Update 2026\u201327 school information. Urgency: High.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "High",
+      "email_url": "https://mail.google.com/mail/u/0/#search/FinalForms+Hardy",
+      "follow_up": false
     },
     {
       "id": "canada-update-tyler",
@@ -81,7 +185,10 @@
       "due_date": "2026-09-23",
       "category": "other",
       "note": "",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Complete%20the%20Canada%20update%20for%20Tyler%2C%20including%20adding%20your%20own%20notes%20into%20it",
+      "follow_up": false
     },
     {
       "id": "recompete-onsite-summary",
@@ -89,7 +196,21 @@
       "due_date": "2026-09-23",
       "category": "other",
       "note": "",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Summarize%20the%20Recompete%20on-site%20notes",
+      "follow_up": false
+    },
+    {
+      "id": "cherokee-goaltending-contract",
+      "text": "2018 Cherokee goaltending contract",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Review 2018 Cherokee Team Contract \u2014 Goaltending Coaching (left in Inbox). Urgency: Medium.",
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Cherokee%20Goaltending%20Contract",
+      "follow_up": false
     },
     {
       "id": "gtaha-board-meeting",
@@ -97,7 +218,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Ensure a team representative attends. Urgency: Medium.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/GTAHA%20Board%20Meeting",
+      "follow_up": false
     },
     {
       "id": "hockey-manager-packet",
@@ -105,7 +229,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Have players/parents sign and return forms. Urgency: Medium.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Hockey%20manager%20packet",
+      "follow_up": false
     },
     {
       "id": "opt-health-quest-lab",
@@ -113,7 +240,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Complete new Quest lab requisition for Opt Health ID 30412 (Mar 2026). Urgency: Medium.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Opt+Health+Quest",
+      "follow_up": false
     },
     {
       "id": "opt-health-next-steps",
@@ -121,7 +251,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Review lab results and schedule next steps (Troy @ Opt Health). Urgency: Medium.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Opt+Health",
+      "follow_up": false
     },
     {
       "id": "st-james-paperwork",
@@ -129,7 +262,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Sign membership paperwork. Urgency: Medium.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/St.%20James%20Club%20paperwork",
+      "follow_up": false
     },
     {
       "id": "term-life-policies",
@@ -137,7 +273,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Review and sign two ready term life policies. Urgency: Medium.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/term+life",
+      "follow_up": false
     },
     {
       "id": "goldfish-overdue",
@@ -145,7 +284,10 @@
       "due_date": "2026-09-23",
       "category": "school",
       "note": "Pay past-due Goldfish Swim School balance. Urgency: Medium.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Goldfish+Swim",
+      "follow_up": false
     },
     {
       "id": "league-apps-registration",
@@ -153,7 +295,10 @@
       "due_date": "2026-09-23",
       "category": "school",
       "note": "Create/complete the new registration account. Urgency: Medium.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/League%20Apps%20registration%20setup",
+      "follow_up": false
     },
     {
       "id": "sylvania-rec-invite",
@@ -161,7 +306,10 @@
       "due_date": "2026-09-23",
       "category": "school",
       "note": "Accept Chelsie Troup\u2019s invite to join the Sylvania Recreation account. Urgency: Medium.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Medium",
+      "email_url": "https://mail.google.com/mail/u/0/#search/Sylvania+Recreation",
+      "follow_up": false
     },
     {
       "id": "team-toledo-hockey-bags",
@@ -169,7 +317,10 @@
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Reorder paid; tracking/fulfillment still pending. Urgency: Low.",
-      "days_late": 0
+      "days_late": 0,
+      "urgency": "Low",
+      "email_url": "https://mail.google.com/mail/u/0/#search/hockey+bags",
+      "follow_up": false
     }
   ]
 }

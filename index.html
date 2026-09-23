@@ -12,99 +12,55 @@
   <title>Buddy Board</title>
   <style>
     :root {
-      --bg: #121216;
-      --panel: #1c1c22;
-      --card: #25252e;
-      --text: #f4f4f7;
-      --muted: #9a9aa8;
-      --accent: #ffc400;
-      --work: #5b8cff;
-      --personal: #57d39a;
-      --email: #ff8f6b;
-      --school: #c084fc;
-      --other: #94a3b8;
-      --late: #ff5c5c;
-      --safe: env(safe-area-inset-top, 0px);
-      --safeb: env(safe-area-inset-bottom, 0px);
+      --bg:#0f0f13; --panel:#1a1a22; --card:#22222c; --text:#f4f4f7; --muted:#9a9aa8;
+      --accent:#ffc400; --work:#5b8cff; --personal:#57d39a; --email:#ff8f6b; --school:#c084fc; --other:#94a3b8;
+      --late:#ff5c5c; --follow:#7dd3fc; --safe:env(safe-area-inset-top,0px); --safeb:env(safe-area-inset-bottom,0px);
     }
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-    html, body {
-      margin: 0; height: 100%; background: var(--bg); color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-      overflow: hidden;
-    }
-    #app { display: flex; flex-direction: column; height: 100%; padding-top: var(--safe); }
-    header {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 10px 14px 8px; gap: 10px;
-    }
-    header h1 { font-size: 17px; margin: 0; font-weight: 700; letter-spacing: -0.02em; }
-    header .meta { color: var(--muted); font-size: 12px; }
-    .pill {
-      border: 0; border-radius: 999px; padding: 8px 12px; font-size: 12px; font-weight: 600;
-      background: var(--accent); color: #111; cursor: pointer;
-    }
-    .pill.ghost { background: #2a2a33; color: var(--text); }
-    #digest {
-      max-height: 38vh; overflow: auto; -webkit-overflow-scrolling: touch;
-      padding: 0 12px 10px; scroll-snap-type: y proximity;
-    }
-    .synth {
-      background: linear-gradient(135deg, #2a2438, #1c1c22);
-      border: 1px solid #353545; border-radius: 16px; padding: 12px 14px; margin-bottom: 10px;
-    }
-    .synth strong { display: block; font-size: 13px; color: var(--accent); margin-bottom: 4px; }
-    .synth p { margin: 0; font-size: 14px; line-height: 1.4; color: #ddd; }
-    .section-label {
-      font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
-      color: var(--muted); margin: 8px 2px 6px;
-    }
-    .cards { display: flex; flex-direction: column; gap: 8px; }
-    .card {
-      background: var(--card); border-radius: 14px; padding: 12px 14px;
-      border-left: 4px solid var(--other); scroll-snap-align: start;
-    }
-    .card.work { border-left-color: var(--work); }
-    .card.personal { border-left-color: var(--personal); }
-    .card.email { border-left-color: var(--email); }
-    .card.school { border-left-color: var(--school); }
-    .card .title { font-size: 15px; font-weight: 600; line-height: 1.3; margin: 0 0 6px; }
-    .card .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    .badge {
-      font-size: 11px; font-weight: 700; border-radius: 999px; padding: 3px 8px;
-      background: #333342; color: var(--muted);
-    }
-    .badge.late { background: rgba(255,92,92,0.18); color: var(--late); }
-    .badge.due { background: rgba(255,196,0,0.15); color: var(--accent); }
-    .card .note { margin: 8px 0 0; font-size: 13px; color: var(--muted); line-height: 1.35; }
-    #board-wrap {
-      flex: 1; min-height: 0; margin: 0 10px 8px; border-radius: 18px; overflow: hidden;
-      border: 1px solid #2e2e3a; background: #f7f3e8; position: relative;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
-    }
-    #board-wrap::before {
-      content: "Pencil zone"; position: absolute; top: 8px; left: 12px; z-index: 1;
-      font-size: 11px; color: #8a8578; pointer-events: none; font-weight: 600;
-    }
-    canvas {
-      width: 100%; height: 100%; display: block; touch-action: none;
-      cursor: crosshair;
-    }
-    #toolbar {
-      display: flex; gap: 8px; align-items: center; justify-content: space-between;
-      padding: 8px 12px calc(10px + var(--safeb));
-      background: rgba(18,18,22,0.96); border-top: 1px solid #2a2a33;
-    }
-    .tools { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
-    .tool {
-      width: 36px; height: 36px; border-radius: 12px; border: 1px solid #333;
-      background: #22222a; color: var(--text); font-size: 14px; font-weight: 700;
-    }
-    .tool.active { outline: 2px solid var(--accent); }
-    .swatch { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #111; }
-    .swatch.active { outline: 2px solid #fff; }
-    .hint { font-size: 11px; color: var(--muted); text-align: center; padding: 0 12px 6px; }
-    .empty { color: var(--muted); font-size: 14px; padding: 8px; }
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;overflow:hidden}
+    #app{display:flex;flex-direction:column;height:100%;padding-top:var(--safe)}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 14px 8px;gap:10px}
+    header h1{font-size:18px;margin:0;font-weight:750;letter-spacing:-.02em}
+    header .meta{color:var(--muted);font-size:12px;margin-top:2px}
+    .pill{border:0;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:650;background:var(--accent);color:#111}
+    .pill.ghost{background:#2a2a33;color:var(--text)}
+    .tabs{display:flex;gap:6px;padding:0 12px 10px}
+    .tab{flex:1;border:0;border-radius:12px;padding:10px;font-weight:700;font-size:14px;background:#1c1c24;color:var(--muted)}
+    .tab.active{background:var(--card);color:var(--text);outline:1px solid #353545}
+    .panel{flex:1;min-height:0;overflow:auto;-webkit-overflow-scrolling:touch;padding:0 12px calc(16px + var(--safeb))}
+    .panel.hidden{display:none}
+    .synth{background:linear-gradient(135deg,#2a2438,#1a1a22);border:1px solid #353545;border-radius:16px;padding:12px 14px;margin-bottom:12px}
+    .synth strong{display:block;font-size:12px;color:var(--accent);margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
+    .synth p{margin:0;font-size:14px;line-height:1.4;color:#ddd}
+    .section-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:10px 2px 6px}
+    .cards{display:flex;flex-direction:column;gap:10px}
+    .card{background:var(--card);border-radius:16px;padding:14px;border-left:4px solid var(--other);position:relative}
+    .card.work{border-left-color:var(--work)} .card.personal{border-left-color:var(--personal)}
+    .card.email{border-left-color:var(--email)} .card.school{border-left-color:var(--school)}
+    .card.follow{box-shadow:inset 0 0 0 1px rgba(125,211,252,.35)}
+    .card .title{font-size:15px;font-weight:650;line-height:1.3;margin:0 0 8px}
+    .row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+    .badge{font-size:11px;font-weight:700;border-radius:999px;padding:3px 8px;background:#333342;color:var(--muted)}
+    .badge.late{background:rgba(255,92,92,.18);color:var(--late)}
+    .badge.due{background:rgba(255,196,0,.15);color:var(--accent)}
+    .badge.hi{background:rgba(255,92,92,.2);color:#ff8a8a}
+    .badge.fu{background:rgba(125,211,252,.15);color:var(--follow)}
+    .note{margin:8px 0 0;font-size:13px;color:var(--muted);line-height:1.35}
+    .actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+    .btn{flex:1;min-width:72px;border:0;border-radius:12px;padding:10px 8px;font-size:12px;font-weight:700;background:#2d2d38;color:var(--text)}
+    .btn.email{background:#2a3550;color:#c7d7ff}
+    .btn.done{background:#1f3a2d;color:#8dffb5}
+    .btn.follow{background:#1e3340;color:#9ddcff}
+    .btn.del{background:#3a2228;color:#ff9aa8;flex:0 0 auto;min-width:56px}
+    .empty{color:var(--muted);font-size:14px;padding:20px 8px;text-align:center}
+    #notesBox{width:100%;min-height:60vh;border:0;border-radius:16px;padding:14px;background:var(--card);color:var(--text);
+      font-size:16px;line-height:1.45;resize:vertical;outline:none}
+    .notes-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
+    .notes-bar span{font-size:12px;color:var(--muted)}
+    .toast{position:fixed;left:50%;bottom:calc(24px + var(--safeb));transform:translateX(-50%);background:#fff;color:#111;
+      padding:10px 14px;border-radius:999px;font-size:13px;font-weight:650;opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
+    .toast.show{opacity:1}
   </style>
 </head>
 <body>
@@ -114,243 +70,120 @@
         <h1>Buddy Board</h1>
         <div class="meta" id="updated">Loading…</div>
       </div>
-      <div style="display:flex;gap:8px">
-        <button class="pill ghost" id="btnRefresh" type="button">Refresh</button>
-        <button class="pill" id="btnShare" type="button">Share ink</button>
-      </div>
+      <button class="pill ghost" id="btnRefresh" type="button">Refresh</button>
     </header>
-    <div id="digest">
+    <div class="tabs">
+      <button class="tab active" data-tab="list" type="button">Punchlist</button>
+      <button class="tab" data-tab="notes" type="button">Notes</button>
+    </div>
+    <div class="panel" id="panel-list">
       <div class="synth"><strong>Buddy synthesis</strong><p id="synthText">…</p></div>
       <div id="lists"></div>
     </div>
-    <div class="hint">Scroll the list · write below with Apple Pencil · Share ink exports a PNG for Buddy</div>
-    <div id="board-wrap"><canvas id="c"></canvas></div>
-    <div id="toolbar">
-      <div class="tools">
-        <button class="tool active" data-mode="pen" type="button" title="Pen">✎</button>
-        <button class="tool" data-mode="eraser" type="button" title="Eraser">⌫</button>
-        <button class="swatch active" data-color="#1a1a1a" style="background:#1a1a1a" type="button"></button>
-        <button class="swatch" data-color="#c1121f" style="background:#c1121f" type="button"></button>
-        <button class="swatch" data-color="#1d4ed8" style="background:#1d4ed8" type="button"></button>
-        <button class="swatch" data-color="#15803d" style="background:#15803d" type="button"></button>
+    <div class="panel hidden" id="panel-notes">
+      <div class="notes-bar">
+        <span>Saved on this device</span>
+        <button class="pill ghost" id="btnClearNotes" type="button">Clear notes</button>
       </div>
-      <div class="tools">
-        <button class="tool" id="btnUndo" type="button" title="Undo">↶</button>
-        <button class="tool" id="btnClear" type="button" title="Clear">✕</button>
-      </div>
+      <textarea id="notesBox" placeholder="Type notes here — follow-ups, scratch, whatever you need…"></textarea>
     </div>
   </div>
+  <div class="toast" id="toast"></div>
   <script>
-  const canvas = document.getElementById('c');
-  const ctx = canvas.getContext('2d', { willReadFrequently: true });
-  const DB_KEY = 'buddy-board-ink-v1';
-  let mode = 'pen';
-  let color = '#1a1a1a';
-  let drawing = false;
-  let strokes = [];
-  let current = null;
+  const DONE_KEY='buddy-board-done-v1';
+  const DEL_KEY='buddy-board-del-v1';
+  const FU_KEY='buddy-board-fu-v1';
+  const NOTES_KEY='buddy-board-notes-v1';
+  let data={items:[]};
 
-  function resize() {
-    const wrap = document.getElementById('board-wrap');
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const w = wrap.clientWidth;
-    const h = wrap.clientHeight;
-    canvas.width = Math.max(1, Math.floor(w * dpr));
-    canvas.height = Math.max(1, Math.floor(h * dpr));
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
-    redraw();
+  const loadSet=k=>{try{return new Set(JSON.parse(localStorage.getItem(k)||'[]'))}catch{return new Set()}};
+  const saveSet=(k,s)=>localStorage.setItem(k,JSON.stringify([...s]));
+  let done=loadSet(DONE_KEY), deleted=loadSet(DEL_KEY), follow=loadSet(FU_KEY);
+
+  function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+  function lateLabel(n){n=n||0;return n<=0?{text:'Due today',cls:'due'}:{text:n+(n===1?' day late':' days late'),cls:'late'}}
+
+  function visibleItems(){
+    return (data.items||[]).filter(it=>!done.has(it.id)&&!deleted.has(it.id));
   }
 
-  function redraw() {
-    ctx.save();
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.restore();
-    // paper tint already from CSS; keep canvas transparent
-    for (const s of strokes) drawStroke(s);
-    if (current) drawStroke(current);
-  }
-
-  function drawStroke(s) {
-    if (!s.points.length) return;
-    ctx.save();
-    if (s.mode === 'eraser') {
-      ctx.globalCompositeOperation = 'destination-out';
-      ctx.strokeStyle = 'rgba(0,0,0,1)';
-    } else {
-      ctx.globalCompositeOperation = 'source-over';
-      ctx.strokeStyle = s.color;
-    }
-    ctx.beginPath();
-    s.points.forEach((p, i) => {
-      const width = Math.max(1.2, (s.mode === 'eraser' ? 18 : 2.2) * (p.pressure || 0.5) * 2);
-      ctx.lineWidth = width;
-      if (i === 0) ctx.moveTo(p.x, p.y);
-      else ctx.lineTo(p.x, p.y);
-    });
-    ctx.stroke();
-    ctx.restore();
-  }
-
-  function pos(e) {
-    const r = canvas.getBoundingClientRect();
-    return {
-      x: e.clientX - r.left,
-      y: e.clientY - r.top,
-      pressure: (e.pressure && e.pressure > 0) ? e.pressure : 0.5
-    };
-  }
-
-  function save() {
-    try { localStorage.setItem(DB_KEY, JSON.stringify(strokes)); } catch (_) {}
-  }
-  function load() {
-    try {
-      const raw = localStorage.getItem(DB_KEY);
-      if (raw) strokes = JSON.parse(raw) || [];
-    } catch (_) { strokes = []; }
-  }
-
-  canvas.addEventListener('pointerdown', (e) => {
-    // Prefer stylus; still allow finger
-    canvas.setPointerCapture(e.pointerId);
-    drawing = true;
-    current = { mode, color, points: [pos(e)] };
-    e.preventDefault();
-  });
-  canvas.addEventListener('pointermove', (e) => {
-    if (!drawing || !current) return;
-    current.points.push(pos(e));
-    redraw();
-    e.preventDefault();
-  });
-  function endStroke(e) {
-    if (!drawing) return;
-    drawing = false;
-    if (current && current.points.length) {
-      strokes.push(current);
-      save();
-    }
-    current = null;
-    redraw();
-    if (e) e.preventDefault();
-  }
-  canvas.addEventListener('pointerup', endStroke);
-  canvas.addEventListener('pointercancel', endStroke);
-
-  document.querySelectorAll('.tool[data-mode]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      mode = btn.dataset.mode;
-      document.querySelectorAll('.tool[data-mode]').forEach((b) => b.classList.toggle('active', b === btn));
-    });
-  });
-  document.querySelectorAll('.swatch').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      color = btn.dataset.color;
-      mode = 'pen';
-      document.querySelectorAll('.swatch').forEach((b) => b.classList.toggle('active', b === btn));
-      document.querySelectorAll('.tool[data-mode]').forEach((b) => b.classList.toggle('active', b.dataset.mode === 'pen'));
-    });
-  });
-  document.getElementById('btnUndo').onclick = () => { strokes.pop(); save(); redraw(); };
-  document.getElementById('btnClear').onclick = () => {
-    if (confirm('Clear all pencil marks?')) { strokes = []; save(); redraw(); }
-  };
-  document.getElementById('btnShare').onclick = async () => {
-    const exportCanvas = document.createElement('canvas');
-    exportCanvas.width = canvas.width;
-    exportCanvas.height = canvas.height;
-    const ex = exportCanvas.getContext('2d');
-    ex.fillStyle = '#f7f3e8';
-    ex.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
-    ex.drawImage(canvas, 0, 0);
-    exportCanvas.toBlob(async (blob) => {
-      if (!blob) return;
-      const file = new File([blob], `buddy-board-${new Date().toISOString().slice(0,10)}.png`, { type: 'image/png' });
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({ files: [file], title: 'Buddy Board ink' });
-      } else {
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = file.name;
-        a.click();
-        URL.revokeObjectURL(a.href);
-      }
-    }, 'image/png');
-  };
-
-  function daysLateLabel(item) {
-    const n = item.days_late ?? 0;
-    if (n <= 0) return { text: 'Due today', cls: 'due' };
-    return { text: n + (n === 1 ? ' day late' : ' days late'), cls: 'late' };
-  }
-
-  function renderTodos(data) {
-    document.getElementById('synthText').textContent = data.synthesis || 'No synthesis yet.';
-    document.getElementById('updated').textContent = data.updated_at
-      ? ('Updated ' + new Date(data.updated_at).toLocaleString())
-      : '—';
-    const by = {};
-    (data.items || []).forEach((it) => {
-      const cat = (it.category || 'other').toLowerCase();
-      (by[cat] = by[cat] || []).push(it);
-    });
-    const order = ['work', 'personal', 'email', 'school', 'other'];
-    const lists = document.getElementById('lists');
-    lists.innerHTML = '';
-    let any = false;
-    for (const cat of order) {
-      const items = by[cat];
-      if (!items || !items.length) continue;
-      any = true;
-      const lab = document.createElement('div');
-      lab.className = 'section-label';
-      lab.textContent = cat;
+  function render(){
+    document.getElementById('synthText').textContent=data.synthesis||'No synthesis yet.';
+    document.getElementById('updated').textContent=data.updated_at?('Updated '+new Date(data.updated_at).toLocaleString()):'—';
+    const items=visibleItems();
+    const by={};
+    items.forEach(it=>{const c=(it.category||'other').toLowerCase();(by[c]=by[c]||[]).push(it)});
+    const order=['work','personal','email','school','other'];
+    const lists=document.getElementById('lists');
+    lists.innerHTML='';
+    let any=false;
+    for(const cat of order){
+      const arr=by[cat]; if(!arr||!arr.length) continue; any=true;
+      const lab=document.createElement('div'); lab.className='section-label'; lab.textContent=cat+' · '+arr.length;
       lists.appendChild(lab);
-      const wrap = document.createElement('div');
-      wrap.className = 'cards';
-      for (const it of items) {
-        const late = daysLateLabel(it);
-        const card = document.createElement('div');
-        card.className = 'card ' + cat;
-        card.innerHTML = `<p class="title"></p><div class="row"><span class="badge ${late.cls}"></span></div>`;
-        card.querySelector('.title').textContent = it.text;
-        card.querySelector('.badge').textContent = late.text;
-        if (it.note) {
-          const n = document.createElement('p');
-          n.className = 'note';
-          n.textContent = it.note;
-          card.appendChild(n);
+      const wrap=document.createElement('div'); wrap.className='cards';
+      for(const it of arr){
+        const late=lateLabel(it.days_late);
+        const isFu=follow.has(it.id)||it.follow_up;
+        const card=document.createElement('div');
+        card.className='card '+cat+(isFu?' follow':'');
+        const urg=it.urgency||'';
+        card.innerHTML=`<p class="title"></p><div class="row"></div><p class="note" style="display:none"></p><div class="actions"></div>`;
+        card.querySelector('.title').textContent=it.text;
+        const row=card.querySelector('.row');
+        const b1=document.createElement('span'); b1.className='badge '+late.cls; b1.textContent=late.text; row.appendChild(b1);
+        if(urg){const b=document.createElement('span'); b.className='badge'+(urg==='High'?' hi':''); b.textContent=urg; row.appendChild(b)}
+        if(isFu){const b=document.createElement('span'); b.className='badge fu'; b.textContent='Follow-up'; row.appendChild(b)}
+        if(it.note){const n=card.querySelector('.note'); n.style.display='block'; n.textContent=it.note}
+        const actions=card.querySelector('.actions');
+        const mk=(cls,label,fn)=>{const b=document.createElement('button'); b.type='button'; b.className='btn '+cls; b.textContent=label; b.onclick=fn; return b};
+        if(it.email_url){
+          actions.appendChild(mk('email','Email',()=>window.open(it.email_url,'_blank')));
         }
+        actions.appendChild(mk('done','Done',()=>{done.add(it.id); follow.delete(it.id); saveSet(DONE_KEY,done); saveSet(FU_KEY,follow); toast('Done — tell Buddy: done: '+it.text); render()}));
+        actions.appendChild(mk('follow', isFu?'Unflag':'Follow-up',()=>{
+          if(follow.has(it.id)) follow.delete(it.id); else follow.add(it.id);
+          saveSet(FU_KEY,follow); render();
+        }));
+        actions.appendChild(mk('del','Delete',()=>{
+          if(!confirm('Remove from your board view?')) return;
+          deleted.add(it.id); follow.delete(it.id); saveSet(DEL_KEY,deleted); saveSet(FU_KEY,follow);
+          toast('Deleted locally — tell Buddy to drop it for good'); render();
+        }));
         wrap.appendChild(card);
       }
       lists.appendChild(wrap);
     }
-    if (!any) {
-      lists.innerHTML = '<div class="empty">No open items. Write below, or wait for Buddy’s morning pass.</div>';
-    }
+    if(!any) lists.innerHTML='<div class="empty">All clear on this device. Pull to refresh after Buddy publishes, or add notes in the Notes tab.</div>';
   }
 
-  async function loadTodos() {
-    const res = await fetch('todos.json?ts=' + Date.now(), { cache: 'no-store' });
-    const data = await res.json();
-    renderTodos(data);
+  async function loadTodos(){
+    const res=await fetch('todos.json?ts='+Date.now(),{cache:'no-store'});
+    data=await res.json();
+    render();
   }
-  document.getElementById('btnRefresh').onclick = () => loadTodos().catch(console.error);
 
-  load();
-  resize();
-  window.addEventListener('resize', resize);
-  loadTodos().catch(() => {
-    document.getElementById('synthText').textContent = 'Could not load todos yet.';
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.onclick=()=>{
+      document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b===btn));
+      document.getElementById('panel-list').classList.toggle('hidden', btn.dataset.tab!=='list');
+      document.getElementById('panel-notes').classList.toggle('hidden', btn.dataset.tab!=='notes');
+    };
   });
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js').catch(() => {});
-  }
+
+  const notes=document.getElementById('notesBox');
+  notes.value=localStorage.getItem(NOTES_KEY)||'';
+  let notesTimer=null;
+  notes.addEventListener('input',()=>{
+    clearTimeout(notesTimer);
+    notesTimer=setTimeout(()=>localStorage.setItem(NOTES_KEY, notes.value),200);
+  });
+  document.getElementById('btnClearNotes').onclick=()=>{
+    if(confirm('Clear all typed notes on this device?')){notes.value=''; localStorage.removeItem(NOTES_KEY)}
+  };
+  document.getElementById('btnRefresh').onclick=()=>loadTodos().catch(console.error);
+  loadTodos().catch(()=>{document.getElementById('synthText').textContent='Could not load punchlist yet.';});
+  if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
   </script>
 </body>
 </html>
