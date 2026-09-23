@@ -68,7 +68,7 @@
     <header>
       <div>
         <h1>Buddy Board</h1>
-        <div class="meta" id="updated">Loading…</div>
+        <div class="meta" id="updated">Loading…</div><div class="meta" id="buildStamp" style="color:#57d39a">build-v3 · punchlist+notes</div>
       </div>
       <button class="pill ghost" id="btnRefresh" type="button">Refresh</button>
     </header>
@@ -183,7 +183,9 @@
   };
   document.getElementById('btnRefresh').onclick=()=>loadTodos().catch(console.error);
   loadTodos().catch(()=>{document.getElementById('synthText').textContent='Could not load punchlist yet.';});
-  if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+  if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').then(r=>r.update()).catch(()=>{});
+  // purge ancient SW if stuck
+  navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>{if(!r.active||!(r.active.scriptURL||'').includes('sw.js'))r.unregister()}));
   </script>
 </body>
 </html>
