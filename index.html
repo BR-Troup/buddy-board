@@ -68,7 +68,7 @@
     <header>
       <div>
         <h1>Buddy Board</h1>
-        <div class="meta" id="updated">Loading…</div><div class="meta" id="buildStamp" style="color:#57d39a">build-v3 · punchlist+notes</div>
+        <div class="meta" id="updated">Loading…</div><div class="meta" id="buildStamp" style="color:#57d39a">build-v4 · email→Safari</div>
       </div>
       <button class="pill ghost" id="btnRefresh" type="button">Refresh</button>
     </header>
@@ -99,6 +99,25 @@
   const loadSet=k=>{try{return new Set(JSON.parse(localStorage.getItem(k)||'[]'))}catch{return new Set()}};
   const saveSet=(k,s)=>localStorage.setItem(k,JSON.stringify([...s]));
   let done=loadSet(DONE_KEY), deleted=loadSet(DEL_KEY), follow=loadSet(FU_KEY);
+
+  
+  function openEmail(it){
+    // From a Home Screen PWA, window.open often uses a cookie-less sheet → Google login every time and the #thread is lost.
+    // Opening via <a target=_blank> sends you to real Safari, which already has your Gmail session.
+    const url = it.email_url;
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    // iOS standalone: this exits the PWA into Safari
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+  async function copyLink(url){
+    try { await navigator.clipboard.writeText(url); toast('Link copied — paste in Safari/Gmail'); }
+    catch { prompt('Copy this Gmail link:', url); }
+  }
 
   function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
   function lateLabel(n){n=n||0;return n<=0?{text:'Due today',cls:'due'}:{text:n+(n===1?' day late':' days late'),cls:'late'}}
@@ -138,7 +157,8 @@
         const actions=card.querySelector('.actions');
         const mk=(cls,label,fn)=>{const b=document.createElement('button'); b.type='button'; b.className='btn '+cls; b.textContent=label; b.onclick=fn; return b};
         if(it.email_url){
-          actions.appendChild(mk('email','Email',()=>window.open(it.email_url,'_blank')));
+          actions.appendChild(mk('email','Email',()=>openEmail(it)));
+          actions.appendChild(mk('','Copy',()=>copyLink(it.email_url)));
         }
         actions.appendChild(mk('done','Done',()=>{done.add(it.id); follow.delete(it.id); saveSet(DONE_KEY,done); saveSet(FU_KEY,follow); toast('Done — tell Buddy: done: '+it.text); render()}));
         actions.appendChild(mk('follow', isFu?'Unflag':'Follow-up',()=>{

@@ -1,4 +1,4 @@
-const CACHE = 'buddy-board-v3';
+const CACHE = 'buddy-board-v4';
 self.addEventListener('install', (e) => {
   self.skipWaiting();
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll([
