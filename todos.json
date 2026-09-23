@@ -1,17 +1,18 @@
 {
-  "updated_at": "2026-09-22T20:54:00-04:00",
+  "updated_at": "2026-09-22T20:56:00-04:00",
   "headline": "Punchlist",
-  "synthesis": "29 open \u2014 16 high urgency. New overnight: USAA, Netflix hold, Credit Karma, hard inquiry, ADT DocuSign, Opt Health password/labs, Cherokee goaltending contract. Tap Email \u00b7 Done \u00b7 Follow-up \u00b7 Delete. Notes tab for typed notes.",
+  "synthesis": "29 open \u2014 16 high. Wired exact Gmail thread links for the overnight 8. Some older flags (USAA/Netflix/Credit Karma/ADT) may be stale \u2014 check before burning cycles.",
   "items": [
     {
       "id": "adt-docusign",
       "text": "ADT DocuSign contract",
       "due_date": "2026-09-23",
       "category": "personal",
-      "note": "ADT contract signature requested via DocuSign. Urgency: High.",
+      "note": "ADT contract signature requested via DocuSign. Urgency: High. Stale-check: Apr 2023.",
       "days_late": 0,
       "urgency": "High",
-      "email_url": "https://mail.google.com/mail/u/0/#search/ADT%20DocuSign",
+      "email_url": "https://mail.google.com/mail/u/0/#inbox/18757ab7308f46db",
+      "thread_id": "18757ab7308f46db",
       "follow_up": false
     },
     {
@@ -19,10 +20,11 @@
       "text": "Credit Karma new account alert",
       "due_date": "2026-09-23",
       "category": "personal",
-      "note": "Verify if new account on Credit Karma is yours. Urgency: High.",
+      "note": "Verify if new account on Credit Karma is yours. Urgency: High. Stale-check: Aug 2023.",
       "days_late": 0,
       "urgency": "High",
-      "email_url": "https://mail.google.com/mail/u/0/#search/Credit%20Karma%20account",
+      "email_url": "https://mail.google.com/mail/u/0/#inbox/18a045ee8f078a42",
+      "thread_id": "18a045ee8f078a42",
       "follow_up": false
     },
     {
@@ -34,6 +36,7 @@
       "days_late": 0,
       "urgency": "High",
       "email_url": "https://mail.google.com/mail/u/0/#search/Dialed+In+Goaltending",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -45,6 +48,7 @@
       "days_late": 0,
       "urgency": "High",
       "email_url": "https://mail.google.com/mail/u/0/#search/Fidelity",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -52,10 +56,11 @@
       "text": "Hard credit check added",
       "due_date": "2026-09-23",
       "category": "personal",
-      "note": "Verify recent hard credit inquiry. Urgency: High.",
+      "note": "Verify recent hard credit inquiry. Urgency: High. Stale-check: Jul 2023.",
       "days_late": 0,
       "urgency": "High",
-      "email_url": "https://mail.google.com/mail/u/0/#search/hard%20inquiry%20OR%20credit%20check",
+      "email_url": "https://mail.google.com/mail/u/0/#inbox/189527ab6e45313c",
+      "thread_id": "189527ab6e45313c",
       "follow_up": false
     },
     {
@@ -67,6 +72,7 @@
       "days_late": 0,
       "urgency": "High",
       "email_url": "https://mail.google.com/mail/u/0/#search/Mercy+Health",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -78,6 +84,7 @@
       "days_late": 0,
       "urgency": "High",
       "email_url": "https://mail.google.com/mail/u/0/#search/e-waiver+OR+Grinder",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -85,10 +92,11 @@
       "text": "Netflix account on hold",
       "due_date": "2026-09-23",
       "category": "personal",
-      "note": "Update billing \u2014 Netflix account on hold. Urgency: High.",
+      "note": "Update billing \u2014 Netflix account on hold. Urgency: High. Stale-check: Jan 2021 \u2014 likely stale.",
       "days_late": 0,
       "urgency": "High",
-      "email_url": "https://mail.google.com/mail/u/0/#search/Netflix%20hold%20OR%20billing",
+      "email_url": "https://mail.google.com/mail/u/0/#inbox/176f25d72da98231",
+      "thread_id": "176f25d72da98231",
       "follow_up": false
     },
     {
@@ -96,10 +104,11 @@
       "text": "Opt Health labs / next steps",
       "due_date": "2026-09-23",
       "category": "personal",
-      "note": "Labs in; log into Opt Health; Quest requisition if still open. Urgency: High.",
+      "note": "Labs in; log into Opt Health; Quest requisition if still open. Urgency: High. Stale-check: Troy thread; also requisition 19cafd457b2b644b.",
       "days_late": 0,
       "urgency": "High",
-      "email_url": "https://mail.google.com/mail/u/0/#search/Opt%20Health%20lab%20OR%20Quest",
+      "email_url": "https://mail.google.com/mail/u/0/#inbox/19ab68251fcb8df6",
+      "thread_id": "19ab68251fcb8df6",
       "follow_up": false
     },
     {
@@ -107,10 +116,11 @@
       "text": "Opt Health password reset",
       "due_date": "2026-09-23",
       "category": "personal",
-      "note": "Reset Opt Health password (Jun 1 2026 email). Urgency: High.",
+      "note": "Reset Opt Health password (Jun 1 2026 email). Urgency: High. Stale-check: Jun 1 2026.",
       "days_late": 0,
       "urgency": "High",
-      "email_url": "https://mail.google.com/mail/u/0/#search/Opt%20Health%20password",
+      "email_url": "https://mail.google.com/mail/u/0/#inbox/19e8379f482dcf29",
+      "thread_id": "19e8379f482dcf29",
       "follow_up": false
     },
     {
@@ -122,6 +132,7 @@
       "days_late": 0,
       "urgency": "High",
       "email_url": "https://mail.google.com/mail/u/0/#search/tournament+invoice",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -129,10 +140,11 @@
       "text": "USAA insurance cancellation pending",
       "due_date": "2026-09-23",
       "category": "personal",
-      "note": "Avoid cancellation of USAA insurance policy \u2014 action needed. Urgency: High.",
+      "note": "Avoid cancellation of USAA insurance policy \u2014 action needed. Urgency: High. Stale-check: May 2023 \u2014 may be moot; still in Inbox.",
       "days_late": 0,
       "urgency": "High",
-      "email_url": "https://mail.google.com/mail/u/0/#search/USAA%20cancel%20OR%20cancellation",
+      "email_url": "https://mail.google.com/mail/u/0/#inbox/1884c4268cf663bd",
+      "thread_id": "1884c4268cf663bd",
       "follow_up": false
     },
     {
@@ -144,6 +156,7 @@
       "days_late": 0,
       "urgency": "High",
       "email_url": "https://mail.google.com/mail/u/0/#search/Venmo+password",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -155,6 +168,7 @@
       "days_late": 0,
       "urgency": "High",
       "email_url": "https://mail.google.com/mail/u/0/#search/Venmo+phone",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -166,6 +180,7 @@
       "days_late": 0,
       "urgency": "High",
       "email_url": "https://mail.google.com/mail/u/0/#search/FinalForms",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -177,6 +192,7 @@
       "days_late": 0,
       "urgency": "High",
       "email_url": "https://mail.google.com/mail/u/0/#search/FinalForms+Hardy",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -188,6 +204,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/Complete%20the%20Canada%20update%20for%20Tyler%2C%20including%20adding%20your%20own%20notes%20into%20it",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -199,6 +216,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/Summarize%20the%20Recompete%20on-site%20notes",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -206,10 +224,11 @@
       "text": "2018 Cherokee goaltending contract",
       "due_date": "2026-09-23",
       "category": "personal",
-      "note": "Review 2018 Cherokee Team Contract \u2014 Goaltending Coaching (left in Inbox). Urgency: Medium.",
+      "note": "Review 2018 Cherokee Team Contract \u2014 Goaltending Coaching (left in Inbox). Urgency: Medium. Stale-check: Aug 2025 Dialed In / jotform 25-26.",
       "days_late": 0,
       "urgency": "Medium",
-      "email_url": "https://mail.google.com/mail/u/0/#search/Cherokee%20Goaltending%20Contract",
+      "email_url": "https://mail.google.com/mail/u/0/#inbox/19879f7c81f21416",
+      "thread_id": "19879f7c81f21416",
       "follow_up": false
     },
     {
@@ -221,6 +240,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/GTAHA%20Board%20Meeting",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -232,6 +252,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/Hockey%20manager%20packet",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -243,6 +264,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/Opt+Health+Quest",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -254,6 +276,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/Opt+Health",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -265,6 +288,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/St.%20James%20Club%20paperwork",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -276,6 +300,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/term+life",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -287,6 +312,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/Goldfish+Swim",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -298,6 +324,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/League%20Apps%20registration%20setup",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -309,6 +336,7 @@
       "days_late": 0,
       "urgency": "Medium",
       "email_url": "https://mail.google.com/mail/u/0/#search/Sylvania+Recreation",
+      "thread_id": null,
       "follow_up": false
     },
     {
@@ -320,6 +348,7 @@
       "days_late": 0,
       "urgency": "Low",
       "email_url": "https://mail.google.com/mail/u/0/#search/hockey+bags",
+      "thread_id": null,
       "follow_up": false
     }
   ]
