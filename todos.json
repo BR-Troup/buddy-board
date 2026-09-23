@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-22T20:17:00-04:00",
+  "updated_at": "2026-09-22T20:51:00-04:00",
   "headline": "Daily board",
-  "synthesis": "17 open items \u2014 9 high urgency. Latest from Vacuum: Sylvania Rec invite, FinalForms migration, Goldfish Swim $31, Venmo phone-change confirm.",
+  "synthesis": "21 open items \u2014 9 high urgency. Overnight add: Opt Health lab + next steps, term life policies, Team Toledo bags tracking.",
   "items": [
     {
       "id": "dialed-in-aug-invoice",
@@ -108,11 +108,35 @@
       "days_late": 0
     },
     {
+      "id": "opt-health-quest-lab",
+      "text": "Opt Health Quest lab requisition",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Complete new Quest lab requisition for Opt Health ID 30412 (Mar 2026). Urgency: Medium.",
+      "days_late": 0
+    },
+    {
+      "id": "opt-health-next-steps",
+      "text": "Opt Health next steps",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Review lab results and schedule next steps (Troy @ Opt Health). Urgency: Medium.",
+      "days_late": 0
+    },
+    {
       "id": "st-james-paperwork",
       "text": "St. James Club paperwork",
       "due_date": "2026-09-23",
       "category": "personal",
       "note": "Sign membership paperwork. Urgency: Medium.",
+      "days_late": 0
+    },
+    {
+      "id": "term-life-policies",
+      "text": "Term life insurance policies",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Review and sign two ready term life policies. Urgency: Medium.",
       "days_late": 0
     },
     {
@@ -137,6 +161,14 @@
       "due_date": "2026-09-23",
       "category": "school",
       "note": "Accept Chelsie Troup\u2019s invite to join the Sylvania Recreation account. Urgency: Medium.",
+      "days_late": 0
+    },
+    {
+      "id": "team-toledo-hockey-bags",
+      "text": "Team Toledo custom hockey bags",
+      "due_date": "2026-09-23",
+      "category": "personal",
+      "note": "Reorder paid; tracking/fulfillment still pending. Urgency: Low.",
       "days_late": 0
     }
   ]
